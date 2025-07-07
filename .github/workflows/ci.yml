@@ -3,8 +3,6 @@ name: Simple CI/CD
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 jobs:
   build-and-test:
@@ -21,23 +19,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: Intelligent-Complaint-Analysis-for-Financial-Services
 
       - name: Run tests
         run: npm test
-
-  deploy:
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy step
-        run: echo "🚀 Deploy your code here"
-        # Replace this with your real deploy command
-        # Examples:
-        # - Firebase: firebase deploy --token $FIREBASE_TOKEN
-        # - Vercel: vercel --prod --token $VERCEL_TOKEN
-        # - Netlify: netlify deploy --prod --auth $NETLIFY_TOKEN
+        working-directory: Intelligent-Complaint-Analysis-for-Financial-Services
