@@ -109,5 +109,5 @@ filtered_df.to_csv(OUTPUT_FILE, index=False)
 print(f"\nFiltered dataset saved to {OUTPUT_FILE}")
 print("Filtered Dataset Shape:", filtered_df.shape)
 
-# Summary of filtered data
-print("\nFiltered Product Distribution:\n", filtered_df['Product'].value_counts())
+
+
