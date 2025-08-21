@@ -20,10 +20,15 @@ with open(METADATA_FILE, 'rb') as f:
     metadata = pickle.load(f)
 
 # Load embedding model
-embedder = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+# Better embedding model
+embedder = SentenceTransformer("BAAI/bge-large-en")
 
 # Load LLM for generation
-generator = pipeline("text2text-generation", model="google/flan-t5-base", device=0)
+generator = pipeline(
+    "text-generation",
+    model="mistralai/Mistral-7B-Instruct",
+    device=0
+)
 
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=500,
