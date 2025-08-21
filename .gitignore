@@ -2,3 +2,4 @@ data/
 *.csv
 *.json
 *.xml
+venv
