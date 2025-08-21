@@ -1,8 +1,3 @@
-Of course. I will update the provided README to reflect the new, more powerful model choices. The changes will be clearly marked and justified, providing a path for both local (Mistral) and API (OpenAI) options.
-
-Here is the updated and improved README:
-
----
 
 # CrediTrust Complaint Analysis Chatbot
 **Author**: Mintesinot Atnafu
